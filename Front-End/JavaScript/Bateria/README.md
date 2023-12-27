@@ -12,7 +12,7 @@ O Alura Midi (Bateria) é um projeto interativo onde cada um dos nove botões em
 ```
 https://github.com/larisnarciso/Alura.git
 ```
-2. Abra o arquivo `index.html` no navegador.
+2. Dentro da pasta 'Bateria', abra o arquivo `index.html` no navegador.
 
 ## Tecnologias Utilizadas:
 ![JAVASCRIPT](https://img.shields.io/badge/javascript-%2320232a.svg?style=for-the-badge&logo=javascript&logoColor=%)

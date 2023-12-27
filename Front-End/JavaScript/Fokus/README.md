@@ -1,8 +1,22 @@
 # Técnica Pomodoro - Fokus
 
-<!-- ![Fokus](./images/fokus.png) -->
+![Fokus](./imagens/fokus.png)
 
 Projeto desenvolvido no curso de [JavaScript: manipulando elementos no DOM](https://cursos.alura.com.br/course/javascript-manipulando-elementos-dom).
+
+## Descrição
+
+O Fokus é uma implementação da técnica Pomodoro, uma abordagem de gestão de tempo projetada para melhorar a concentração em tarefas importantes. A técnica envolve períodos focados de trabalho, geralmente 25 minutos, seguidos por pausas curtas de 5 minutos ou pausas mais longas de 15 minutos.
+
+## Instalação:
+
+1. Clone o repositório.
+
+```
+https://github.com/larisnarciso/Alura.git
+```
+
+2. Dentro da pasta /Front-End/JavaScript/Fokus abra o arquivo `index.html` no navegador.
 
 ## Tecnologias:
 

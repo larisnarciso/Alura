@@ -1,6 +1,6 @@
 # Bateria - Alura Midi
 
-![Movie Star](./images/aluramidi.png)
+![Bateria](./images/aluramidi.png)
 Pequeno projeto desenvolvido no curso de [JavaScript para Web: Crie páginas dinâmicas](https://cursos.alura.com.br/course/javascript-web-paginas-dinamicas).
 
 ## Tecnologias:

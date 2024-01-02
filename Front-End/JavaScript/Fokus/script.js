@@ -1,22 +1,31 @@
 const html = document.querySelector('html');
+// const listaBt = document.querySelectorAll('.app__card-button');
+const banner = document.querySelector('.app__image');
 
 const focoBt = document.querySelector('.app__card-button--foco');
 const curtoBt = document.querySelector('.app__card-button--curto');
 const longoBt = document.querySelector('.app__card-button--longo');
 
-const banner = document.querySelector('.app__image');
-
 focoBt.addEventListener('click', () => {
-  html.setAttribute('data-contexto', 'foco');
-  banner.setAttribute('src', '/imagens/foco.png');
+  alterarContexto('foco');
 });
 
 curtoBt.addEventListener('click', () => {
-  html.setAttribute('data-contexto', 'descanso-curto');
-  banner.setAttribute('src', '/imagens/descanso-curto.png');
+  alterarContexto('descanso-curto');
 });
 
 longoBt.addEventListener('click', () => {
-  html.setAttribute('data-contexto', 'descanso-longo');
-  banner.setAttribute('src', '/imagens/descanso-longo.png');
+  alterarContexto('descanso-longo');
 });
+
+// listaBt.forEach((botao) => {
+//   botao.addEventListener('click', () => {
+//     const contexto = botao.dataset.contexto;
+//     alterarContexto(contexto);
+//   });
+// });
+
+function alterarContexto(contexto) {
+  html.setAttribute('data-contexto', contexto);
+  banner.setAttribute('src', `/imagens/${contexto}.png`);
+}

@@ -26,10 +26,11 @@ listaBt.forEach((botao) => {
   botao.addEventListener('click', () => {
     const contexto = botao.dataset.contexto;
     alterarContexto(contexto);
-
     botao.classList.add('active');
     listaBt.forEach((outroBotao) => {
-      if (outroBotao !== botao) outroBotao.classList.remove('active');
+      if (outroBotao !== botao) {
+        outroBotao.classList.remove('active');
+      }
     });
   });
 });
@@ -67,7 +68,6 @@ const contagemRegressiva = () => {
     alert('Tempo finalizado!');
     audioFinalizado.pause();
     audioFinalizado.currentTime = 0;
-    tempoDecorridoEmSegundos = 5;
     zerar();
     return;
   }

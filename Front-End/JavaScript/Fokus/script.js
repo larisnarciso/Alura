@@ -26,6 +26,7 @@ listaBt.forEach((botao) => {
   botao.addEventListener('click', () => {
     const contexto = botao.dataset.contexto;
     alterarContexto(contexto);
+
     botao.classList.add('active');
     listaBt.forEach((outroBotao) => {
       if (outroBotao !== botao) outroBotao.classList.remove('active');

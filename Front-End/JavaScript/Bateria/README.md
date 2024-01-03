@@ -4,6 +4,8 @@
 
 Pequeno projeto desenvolvido no curso de [JavaScript para Web: Crie páginas dinâmicas](https://cursos.alura.com.br/course/javascript-web-paginas-dinamicas).
 
+Para visualizar o projeto, click no link: [Bateria](https://larisnarciso.github.io/Alura/Front-End/JavaScript/Bateria/index.html) 
+
 ## Descrição
 O Alura Midi (Bateria) é um projeto interativo onde cada um dos nove botões emite um som único ao ser clicado.
 

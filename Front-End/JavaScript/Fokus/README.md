@@ -3,6 +3,9 @@
 ![Fokus](./imagens/fokus.png)
 
 Projeto desenvolvido no curso de [JavaScript: manipulando elementos no DOM](https://cursos.alura.com.br/course/javascript-manipulando-elementos-dom).
+E aprimorado no curso de [JavaScript: explorando a manipulação de elementos e da localStorage](https://cursos.alura.com.br/course/javascript-manipulacao-elementos-localstorage).
+
+Para visualizar o projeto, click no link: [Fokus](https://larisnarciso.github.io/Alura/Front-End/JavaScript/Fokus/index.html)
 
 ## Descrição
 

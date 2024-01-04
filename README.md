@@ -2,8 +2,6 @@
 
 O repositório é dividido em pastas contendo projetos e exercícios realizados nos cursos da [Alura](https://www.alura.com.br/). 
 
-Os projetos principais de cada curso pode ser encontrado no [Portfólio](https://larisnarciso.github.io/projetos/) 
-
 ## Tecnologias:
 
 ![HTML](https://img.shields.io/badge/html-%2320232a.svg?style=for-the-badge&logo=html5&logoColor=%e34f26)

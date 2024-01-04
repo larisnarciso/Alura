@@ -164,6 +164,10 @@ h6 {
   justify-content: center;
 }
 
+.app__card-primary-button:first-child {
+  margin-right: 10px;
+}
+
 .app__card-primary-button {
   padding: 0.8rem;
   width: 12rem;

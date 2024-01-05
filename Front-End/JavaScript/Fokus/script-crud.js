@@ -7,6 +7,11 @@ const ulTarefas = document.querySelector('.app__section-task-list');
 // Recupera as tarefas armazenadas localmente ou inicializa uma lista vazia
 const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
 
+// Atualiza as tarefas armazenadas localmente
+function atualizarTarefas() {
+  localStorage.setItem('tarefas', JSON.stringify(tarefas));
+}
+
 // Função para criar a representação visual de uma tarefa
 function criarElementoTarefa(tarefa) {
   // Cria um elemento de lista
@@ -31,12 +36,22 @@ function criarElementoTarefa(tarefa) {
   const botao = document.createElement('button');
   botao.classList.add('app_button-edit');
 
+  // Adiciona um evento de clique ao botão de edição
+  botao.onclick = () => {
+    // Solicita ao usuário um novo nome para a tarefa usando a função prompt
+    const novaDescricao = prompt('Qual é o novo nome da tarefa?');
+    if (novaDescricao) {
+      paragrafo.textContent = novaDescricao; // Atualiza o texto da descrição da tarefa
+      tarefa.descricao = novaDescricao; // Atualiza a referencia da tarefa
+      atualizarTarefas(); // Atualiza as tarefas armazenadas localmente
+    }
+  };
+
   // Cria uma imagem para o botão de edição
   const imagemBotao = document.createElement('img');
   imagemBotao.setAttribute('src', 'imagens/edit.png');
 
-  // Adiciona a imagem ao botão
-  botao.append(imagemBotao);
+  botao.append(imagemBotao); // Adiciona a imagem ao botão
 
   // Adiciona os elementos à lista
   li.append(svg);
@@ -46,38 +61,26 @@ function criarElementoTarefa(tarefa) {
   return li;
 }
 
-// Adiciona um ouvinte de evento para mostrar/ocultar o formulário de adição de tarefas
+// Função para mostrar/ocultar o formulário de adição de tarefas
 btnAdicionarTarefa.addEventListener('click', () => {
   formAdicionarTarefa.classList.toggle('hidden');
 });
 
-// Adiciona um ouvinte de evento para tratar o envio do formulário de adição de tarefas
+// Função para tratar o envio do formulário de adição de tarefas
 formAdicionarTarefa.addEventListener('submit', (evento) => {
   evento.preventDefault(); // Impede o recarregamento da página ao enviar o formulário
-
-  // Cria um objeto de tarefa com a descrição do textarea
   const tarefa = {
-    descricao: textarea.value,
+    descricao: textarea.value, // Cria um objeto de tarefa com a descrição do textarea
   };
-
-  // Adiciona a nova tarefa à lista de tarefas
-  tarefas.push(tarefa);
-
-  // Cria o elemento visual da tarefa e adiciona à lista na interface
-  const elementoTarefa = criarElementoTarefa(tarefa);
-  ulTarefas.append(elementoTarefa);
-
-  // Atualiza as tarefas armazenadas localmente
-  localStorage.setItem('tarefas', JSON.stringify(tarefas));
-
-  // Limpa o conteúdo do textarea
-  textarea.value = '';
-
-  // Oculta o formulário de adição de tarefas
-  formAdicionarTarefa.classList.add('hidden');
+  tarefas.push(tarefa); // Adiciona a nova tarefa à lista de tarefas
+  const elementoTarefa = criarElementoTarefa(tarefa); // Cria o elemento visual da tarefa
+  ulTarefas.append(elementoTarefa); // Adiciona à lista na interface
+  atualizarTarefas(); // Atualiza as tarefas armazenadas localmente
+  textarea.value = ''; // Limpa o conteúdo do textarea
+  formAdicionarTarefa.classList.add('hidden'); // Oculta o formulário
 });
 
-// Percorre a lista de tarefas existentes e adiciona os elementos visuais à interface
+// Itera sobre cada tarefa na lista de tarefas existentes e cria elementos visuais
 tarefas.forEach((tarefa) => {
   const elementoTarefa = criarElementoTarefa(tarefa);
   ulTarefas.append(elementoTarefa);

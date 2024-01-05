@@ -1,5 +1,6 @@
 // Declaração de variáveis
 const btnAdicionarTarefa = document.querySelector('.app__button--add-task');
+const btnCancelar = document.querySelector('.app__form-footer__button--cancel');
 const formAdicionarTarefa = document.querySelector('.app__form-add-task');
 const textarea = document.querySelector('.app__form-textarea');
 const ulTarefas = document.querySelector('.app__section-task-list');
@@ -60,6 +61,15 @@ function criarElementoTarefa(tarefa) {
 
   return li;
 }
+
+// Função para limpar o conteúdo do textarea e esconder o form
+const limparFormulario = () => {
+  textarea.value = ''; // Limpa o contéudo do textarea
+  formAdicionarTarefa.classList.add('hidden');
+};
+
+// Ao clicar no botão "cancelar" do formulario chamará a função
+btnCancelar.addEventListener('click', limparFormulario);
 
 // Função para mostrar/ocultar o formulário de adição de tarefas
 btnAdicionarTarefa.addEventListener('click', () => {

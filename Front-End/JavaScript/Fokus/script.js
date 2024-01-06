@@ -25,7 +25,7 @@ musicaFocoInput.addEventListener('change', () => {
 
 // Mapeamento dos tempos inicias por contexto
 const tempoInicialPorContexto = {
-  foco: 5,
+  foco: 1500,
   'descanso-curto': 300,
   'descanso-longo': 900,
 };

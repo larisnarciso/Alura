@@ -7,10 +7,10 @@ const ulTarefas = document.querySelector('.app__section-task-list');
 const paragrafoDescricaoTarefa = document.querySelector(
   '.app__section-active-task-description'
 );
+const btnRemoverConcluidas = document.querySelector('#btn-remover-concluidas');
 
 // Recupera as tarefas armazenadas localmente ou inicializa uma lista vazia
-const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
-//
+let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
 let tarefaSelecionada = null;
 let liTarefaSelecionada = null;
 
@@ -66,7 +66,9 @@ function criarElementoTarefa(tarefa) {
   li.append(botao);
 
   if (tarefa.completa) {
+    // Adiciona classe de estilo para tarefas completas
     li.classList.add('app__section-task-list-item-complete');
+    // Desabilita o botão para tarefas completas
     botao.setAttribute('disabled', 'disabled');
   } else {
     li.onclick = () => {
@@ -136,8 +138,18 @@ document.addEventListener('FocoFinalizado', () => {
     liTarefaSelecionada.classList.add('app__section-task-list-item-complete');
     liTarefaSelecionada
       .querySelector('button')
-      .setAttribute('disabled', 'disabled');
-    tarefaSelecionada.completa = true;
-    atualizarTarefas();
+      .setAttribute('disabled', 'disabled'); // desabilita o botão
+    tarefaSelecionada.completa = true; // marca como completa
+    atualizarTarefas(); // atualiza a interface
   }
 });
+
+//
+btnRemoverConcluidas.onclick = () => {
+  const seletor = '.app__section-task-list-item-complete';
+  document.querySelectorAll(seletor).forEach((elemento) => {
+    elemento.remove();
+  });
+  tarefas = tarefas.filter((tarefa) => !tarefa.completa); // filtra tarefas removendo as que estao marcadas como concluidas
+  atualizarTarefas(); // atualiza a interace
+};

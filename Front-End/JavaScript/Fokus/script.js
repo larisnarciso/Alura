@@ -65,9 +65,10 @@ const contagemRegressiva = () => {
     audioFinalizado.pause(); // ao clicar em ok, a música será parada
     audioFinalizado.currentTime = 0; // e a música voltará ao início
     const focoAtivo = html.getAttribute('data-contexto') == 'foco';
+    // verifica se o evento esta ativo
     if (focoAtivo) {
-      const evento = new CustomEvent('FocoFinalizado');
-      document.dispatchEvent(evento);
+      const evento = new CustomEvent('FocoFinalizado'); // cria um novo evento
+      document.dispatchEvent(evento); // dispara o evento
     }
     zerarIntervalo(); // chama função para redefinir o temporizador
     resetar(); // resetar temporizador

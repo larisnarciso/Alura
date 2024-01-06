@@ -8,6 +8,7 @@ const paragrafoDescricaoTarefa = document.querySelector(
   '.app__section-active-task-description'
 );
 const btnRemoverConcluidas = document.querySelector('#btn-remover-concluidas');
+const btnRemoverTodas = document.querySelector('#btn-remover-todas');
 
 // Recupera as tarefas armazenadas localmente ou inicializa uma lista vazia
 let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
@@ -144,12 +145,27 @@ document.addEventListener('FocoFinalizado', () => {
   }
 });
 
-//
-btnRemoverConcluidas.onclick = () => {
-  const seletor = '.app__section-task-list-item-complete';
+// Definição da função removerTarefas, que remove elementos da lista de tarefas e atualiza a interface.
+// Recebe um parâmetro booleano 'somenteCompletas' para determinar se devem ser removidas apenas as tarefas completas.
+const removerTarefas = (somenteCompletas) => {
+  // Define o seletor com base no parâmetro, escolhendo entre tarefas completas ou todas as tarefas.
+  const seletor = somenteCompletas
+    ? '.app__section-task-list-item-complete'
+    : '.app__section-task-list-item';
+
+  // Seleciona todos os elementos correspondentes ao seletor e os remove da interface.
   document.querySelectorAll(seletor).forEach((elemento) => {
     elemento.remove();
   });
-  tarefas = tarefas.filter((tarefa) => !tarefa.completa); // filtra tarefas removendo as que estao marcadas como concluidas
-  atualizarTarefas(); // atualiza a interace
+
+  // Atualiza o array de tarefas, filtrando apenas as tarefas não concluídas se somenteCompletas for true.
+  tarefas = somenteCompletas
+    ? tarefas.filter((tarefa) => !tarefa.completa)
+    : [];
+
+  atualizarTarefas();
 };
+
+// Adiciona eventos de clique aos botões de remover concluídas e todas as tarefas, chamando a função correspondente.
+btnRemoverConcluidas.onclick = () => removerTarefas(true);
+btnRemoverTodas.onclick = () => removerTarefas(false);

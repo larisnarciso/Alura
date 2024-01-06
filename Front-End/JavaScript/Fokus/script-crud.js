@@ -4,9 +4,14 @@ const btnCancelar = document.querySelector('.app__form-footer__button--cancel');
 const formAdicionarTarefa = document.querySelector('.app__form-add-task');
 const textarea = document.querySelector('.app__form-textarea');
 const ulTarefas = document.querySelector('.app__section-task-list');
+const paragrafoDescricaoTarefa = document.querySelector(
+  '.app__section-active-task-description'
+);
 
 // Recupera as tarefas armazenadas localmente ou inicializa uma lista vazia
 const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
+//
+let tarefaSelecionada = null;
 
 // Atualiza as tarefas armazenadas localmente
 function atualizarTarefas() {
@@ -58,6 +63,26 @@ function criarElementoTarefa(tarefa) {
   li.append(svg);
   li.append(paragrafo);
   li.append(botao);
+
+  li.onclick = () => {
+    // Remove a classe de todos os elementos que a possuem
+    document
+      .querySelectorAll('.app__section-task-list-item-active')
+      .forEach((elemento) => {
+        elemento.classList.remove('app__section-task-list-item-active');
+      });
+    // deixa de selecionar uma tarefa que foi selecionada
+    if (tarefaSelecionada == tarefa) {
+      paragrafoDescricaoTarefa.textContent = '';
+      tarefaSelecionada = null;
+      return;
+    }
+    tarefaSelecionada = tarefa;
+    // Atualiza o conteúdo do parágrafo com a descrição da tarefa
+    paragrafoDescricaoTarefa.textContent = tarefa.descricao;
+    // Adiciona a classe ao elemento li clicado
+    li.classList.add('app__section-task-list-item-active');
+  };
 
   return li;
 }

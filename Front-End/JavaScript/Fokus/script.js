@@ -25,7 +25,7 @@ musicaFocoInput.addEventListener('change', () => {
 
 // Mapeamento dos tempos inicias por contexto
 const tempoInicialPorContexto = {
-  foco: 1500,
+  foco: 5,
   'descanso-curto': 300,
   'descanso-longo': 900,
 };
@@ -64,7 +64,13 @@ const contagemRegressiva = () => {
     alert('Tempo finalizado!'); // sendo exibido uma mensagem de alerta
     audioFinalizado.pause(); // ao clicar em ok, a música será parada
     audioFinalizado.currentTime = 0; // e a música voltará ao início
+    const focoAtivo = html.getAttribute('data-contexto') == 'foco';
+    if (focoAtivo) {
+      const evento = new CustomEvent('FocoFinalizado');
+      document.dispatchEvent(evento);
+    }
     zerarIntervalo(); // chama função para redefinir o temporizador
+    resetar(); // resetar temporizador
     return;
   }
   tempoDecorridoEmSegundos -= 1;

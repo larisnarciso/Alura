@@ -23,6 +23,7 @@ function verificacaoValida(chute) {
     document.body.innerHTML = `
       <h2>Você acertou!</h2>
       <h3>O número secreto era ${numeroSecreto}</h3>
+      <button id='jogar-novamente' class='btn'>Jogar novamente</button>
     `;
   } else if (numero > numeroSecreto) {
     // Exibir mensagem indicando que o número secreto é menor
@@ -46,3 +47,10 @@ function chuteForInvalido(numero) {
 function numeroForMaiorMenor(numero) {
   return numero > maiorValor || numero < menorValor;
 }
+
+// Aciona botão jogar novamente
+document.body.addEventListener('click', (evento) => {
+  if (evento.target.id == 'jogar-novamente') {
+    window.location.reload();
+  }
+});

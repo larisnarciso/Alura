@@ -3,8 +3,8 @@ const elementoMenorValor = document.querySelector('#menor-valor');
 const elementoMaiorValor = document.querySelector('#maior-valor');
 
 // Definir valores mínimo e máximo
-const menorValor = 10;
-const maiorValor = 100;
+const menorValor = 100;
+const maiorValor = 1000;
 
 // Atualizar elementos HTML com os valores mínimo e máximo
 elementoMenorValor.innerHTML = menorValor;

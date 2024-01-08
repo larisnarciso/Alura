@@ -20,7 +20,6 @@ recognition.addEventListener('result', onSpeak);
 function onSpeak(e) {
   // Obter o texto transcrito a partir dos resultados
   const chute = e.results[0][0].transcript;
-
   // Exibir o chute na tela
   exibeChuteNaTela(chute);
 

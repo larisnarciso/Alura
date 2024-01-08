@@ -5,6 +5,17 @@ function verificacaoValida(chute) {
 
   // Verificar se o chute é inválido (não é um número)
   if (chuteForInvalido(numero)) {
+    if (chute.toUpperCase() === 'GAME OVER') {
+      document.body.innerHTML = `
+              <h2>Game Over !!!</h2>
+              <h3>Pressione o botão para jogar novamente</h3>
+              <button id="jogar-novamente" class="btn gameover" >Jogar novamente</button>
+              `;
+      document.body.style.backgroundColor = '#111';
+    } else {
+      elementoChute.innerHTML += '<div>Valor Inválido</div>';
+    }
+
     // Exibir mensagem de valor inválido
     elementoChute.innerHTML += '<div>Valor inválido</div>';
     return;

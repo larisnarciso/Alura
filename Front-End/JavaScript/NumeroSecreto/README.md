@@ -9,7 +9,8 @@ Para visualizar o projeto, click no link: [Número Secreto](https://larisnarciso
 ## Descrição
 
 O projeto consiste em um jogo interativo de adivinhação chamado "Número Secreto". Na inicialização da página, o computador gera aleatoriamente um número secreto dentro do intervalo de 1 a 1000. O jogador tem a oportunidade de fazer palpites para tentar acertar o número escolhido.
-Caso o palpite seja correto, uma mensagem de acerto é exibida. No entanto, se o palpite estiver errado, o sistema fornece uma dica útil para orientar o jogador. É utilizado reconhecimento por voz para obter os palpites.
+Caso o palpite seja correto, uma mensagem de acerto é exibida. No entanto, se o palpite estiver errado, o sistema fornece uma dica útil para orientar o jogador. Caso o jogador diga 'Game Over' o jogo é finalizado.
+É utilizado reconhecimento por voz para obter os palpites.
 
 ## Instalação:
 

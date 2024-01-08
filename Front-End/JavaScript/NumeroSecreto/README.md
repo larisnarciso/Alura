@@ -1,6 +1,6 @@
 # [Jogo - Número Secreto](https://larisnarciso.github.io/Alura/Front-End/JavaScript/NumeroSecreto/index.html)
 
-<!-- ![NumeroSecreto](./imagens/NumeroSecreto.png) -->
+![NumeroSecreto](./imagens/numerosecreto.png)
 
 Projeto desenvolvido no curso de [JavaScript: validações e reconhecimento de voz](https://cursos.alura.com.br/course/javascript-validacoes-reconhecimento-voz).
 

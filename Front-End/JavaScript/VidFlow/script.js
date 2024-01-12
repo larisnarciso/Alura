@@ -1,5 +1,5 @@
-// Seleciona o elemento HTML com a classe 'videos__container' e armazena na variável containerVideos
 const containerVideos = document.querySelector('.videos__container');
+const barraPesquisa = document.querySelector('.pesquisar__input');
 
 // Define uma função assíncrona chamada buscarVideos
 async function buscarVideos() {
@@ -30,3 +30,20 @@ async function buscarVideos() {
 
 // Chama a função buscarVideos para iniciar o processo de busca e exibição dos vídeos
 buscarVideos();
+
+barraPesquisa.addEventListener('input', filtrarPesquisa);
+
+function filtrarPesquisa() {
+  const videos = document.querySelectorAll('.videos__item');
+  if (barraPesquisa.value != '') {
+    for (let video of videos) {
+      let titulo = video
+        .querySelector('.titulo-video')
+        .textContent.toLowerCase();
+      let valorFiltro = barraPesquisa.value.toLowerCase();
+
+      if (!titulo.includes(valorFiltro)) video.style.display = 'none';
+      else video.style.display = 'block';
+    }
+  }
+}

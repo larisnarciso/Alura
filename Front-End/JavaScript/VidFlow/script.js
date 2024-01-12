@@ -33,17 +33,26 @@ buscarVideos();
 
 barraPesquisa.addEventListener('input', filtrarPesquisa);
 
+// Filtra os vídeos com base no texto inserido na barra de pesquisa.
 function filtrarPesquisa() {
   const videos = document.querySelectorAll('.videos__item');
-  if (barraPesquisa.value != '') {
-    for (let video of videos) {
-      let titulo = video
-        .querySelector('.titulo-video')
-        .textContent.toLowerCase();
-      let valorFiltro = barraPesquisa.value.toLowerCase();
 
-      if (!titulo.includes(valorFiltro)) video.style.display = 'none';
-      else video.style.display = 'block';
-    }
-  }
+  // Converte o valor da barra de pesquisa para minúsculas
+  const valorFiltro = barraPesquisa.value.toLowerCase();
+
+  // Itera sobre cada vídeo e verifica se o título do vídeo contém o valor da barra de pesquisa.
+  videos.forEach((video) => {
+    // Obtém o texto do título do vídeo
+    const titulo = video
+      .querySelector('.titulo-video')
+      .textContent.toLowerCase();
+
+    // Define a exibição do vídeo com base na correspondência do título com o valor da barra de pesquisa.
+    // Se houver correspondência, exibe o vídeo ('block'); caso contrário, oculta ('none'). Se a barra de pesquisa estiver vazia, exibe todos os vídeos.
+    video.style.display = valorFiltro
+      ? titulo.includes(valorFiltro)
+        ? 'block'
+        : 'none'
+      : 'block';
+  });
 }

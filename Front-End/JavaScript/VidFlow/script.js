@@ -1,5 +1,6 @@
 const containerVideos = document.querySelector('.videos__container');
 const barraPesquisa = document.querySelector('.pesquisar__input');
+const botaoCategoria = document.querySelectorAll('.superior__item');
 
 // Define uma função assíncrona chamada buscarVideos
 async function buscarVideos() {
@@ -8,23 +9,25 @@ async function buscarVideos() {
     const response = await fetch('http://localhost:3000/videos');
     // Converte a resposta para JSON e armazena o resultado na variável videos
     const videos = await response.json();
+
     videos.forEach((video) => {
-      if ((video.categoria = '')) throw new Error('Vídeo não tem categoria');
+      if (video.categoria == '') throw new Error('Vídeo não tem categoria');
       // Adiciona conteúdo HTML ao containerVideos para cada vídeo no loop
       containerVideos.innerHTML += `
-        <li class='videos__item'>
-        <iframe src="${video.url}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
-        <div class='descricao-video'>
-        <img class='img-canal' src='${video.imagem}' alt='Logo do Canal'>
-        <h3 class='titulo-video'>${video.titulo}</h3>
-        <p class='titulo-canal'>${video.descricao}</p>
-        </div>
+        <li class="videos__item">
+          <iframe src="${video.url}" title="${video.titulo}" frameborder="0" allowfullscreen></iframe>
+          <div class="descricao-video">
+            <img class="img-canal" src="${video.imagem} alt="Logo do Canal">
+            <h3 class="titulo-video">${video.titulo}</h3>
+            <p class="titulo-canal">${video.descricao}</p>
+            <p class="categoria" hidden>${video.categoria}</p>
+          </div>
         </li>
         `;
     });
   } catch (err) {
     // Bloco de código a ser executado se uma exceção ocorrer
-    containerVideos.innerHTML = `<p>Houve um erro ao carregar os vídeos: ${err}</p>`;
+    containerVideos.innerHTML = `<p> Houve um erro ao carregar os vídeos: ${err}</p>`;
   }
 }
 
@@ -54,5 +57,31 @@ function filtrarPesquisa() {
         ? 'block'
         : 'none'
       : 'block';
+  });
+}
+
+botaoCategoria.forEach((botao) => {
+  // Obtém o nome da categoria associada ao botão
+  let nomeCategoria = botao.getAttribute('name');
+  // Filtrar os vídeos pela categoria
+  botao.addEventListener('click', () => filtrarPorCategoria(nomeCategoria));
+});
+
+// Função para mostrar ou esconder vídeos com base na categoria selecionada
+function filtrarPorCategoria(filtro) {
+  // Obtém todos os vídeos na página
+  const videos = document.querySelectorAll('.videos__item');
+
+  videos.forEach((video) => {
+    // Obtém a categoria do vídeo
+    let categoria = video.querySelector('.categoria').textContent.toLowerCase();
+    // Converte o filtro e a categoria para minúsculas para evitar problemas de maiúsculas/minúsculas
+    let valorFiltro = filtro.toLowerCase();
+
+    // Decide se mostra ou esconde o vídeo com base na categoria selecionada
+    video.style.display =
+      !categoria.includes(valorFiltro) && valorFiltro !== 'tudo'
+        ? 'none'
+        : 'block';
   });
 }

@@ -1,6 +1,7 @@
 const elementoParaInserirLivros = document.getElementById('livros');
 
 function exibirLivros(listaLivros) {
+  elementoParaInserirLivros.innerHTML = '';
   listaLivros.forEach((livro) => {
     const disponibilidadeClasse = livro.quantidade <= 0 ? 'indisponivel' : '';
     elementoParaInserirLivros.innerHTML += `

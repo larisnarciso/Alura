@@ -8,7 +8,7 @@ Para visualizar o projeto, click no link: [AluraBooks](https://larisnarciso.gith
 
 ## Descrição
 
-O AluraBooks é um aplicativo de compartilhamento de vídeos. Neste projeto foi utilizada uma API fake para disponibilizar uma lista de objetos.
+O AluraBooks é site de livros de prorgamação. Neste projeto foi utilizada uma API para disponibilizar uma lista de livros.
 
 - Criar filtros para livros
 - Ordenação de Preço

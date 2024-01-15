@@ -4,8 +4,8 @@ const elementoValorTotal = document.getElementById(
 );
 
 function exibirLivros(listaLivros) {
-  elementoParaInserirLivros.innerHTML = '';
-  elementoValorTotal.innerHTML = '';
+  elementoParaInserirLivros.innerHTML = ''; // Limpa o conteudo onde livros são inseridos
+  elementoValorTotal.innerHTML = ''; // Limpa o conteudo onde o valor total é exibido
   listaLivros.forEach((livro) => {
     let disponibilidadeClasse = livro.quantidade <= 0 ? 'indisponivel' : '';
     elementoParaInserirLivros.innerHTML += `

@@ -1,3 +1,6 @@
+// Função para calcular o valor total dos livros disponíveis
 function totalLivrosDisponiveis(livros) {
+  // Utilizando o método reduce para somar os preços de todos os livros disponíveis
+  // O valor inicial do acumulador (acc) é 0
   return livros.reduce((acc, livro) => acc + livro.preco, 0).toFixed(2);
 }

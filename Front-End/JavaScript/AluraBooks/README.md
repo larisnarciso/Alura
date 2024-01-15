@@ -1,6 +1,6 @@
 # [AluraBooks](https://larisnarciso.github.io/Alura/Front-End/JavaScript/AluraBooks/index.html)
 
-<!-- ![AluraBooks](./imagens/AluraBooks.png) -->
+![AluraBooks](./imagens/AluraBook.png)
 
 Projeto desenvolvido no curso de [JavaScript: métodos de array](https://cursos.alura.com.br/course/javascript-metodos-array).
 

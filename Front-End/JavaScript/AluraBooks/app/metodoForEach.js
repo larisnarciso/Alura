@@ -3,7 +3,7 @@ const elementoParaInserirLivros = document.getElementById('livros');
 function exibirLivros(listaLivros) {
   elementoParaInserirLivros.innerHTML = '';
   listaLivros.forEach((livro) => {
-    const disponibilidadeClasse = livro.quantidade <= 0 ? 'indisponivel' : '';
+    let disponibilidadeClasse = livro.quantidade <= 0 ? 'indisponivel' : '';
     elementoParaInserirLivros.innerHTML += `
     <div class="livro">
       <img class="livro__imagens ${disponibilidadeClasse}" src=${

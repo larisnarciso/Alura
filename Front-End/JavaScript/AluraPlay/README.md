@@ -26,7 +26,32 @@ O AluraPlay é uma plataforma de compartilhamento de vídeos, contendo header, b
 https://github.com/larisnarciso/Alura.git
 ```
 
-2. Dentro da pasta /Front-End/JavaScript/AluraPlay abra o arquivo `index.html` no navegador.
+2. Instalando JSON Server.
+
+```
+npm install -g json-server
+```
+
+3. Permitindo política de execução de scripts (apenas Windows)
+   Execute o seguinte comando para permitir a execução de scripts no seu computador:
+
+```
+Set-ExecutionPolicy RemoteSigned
+```
+
+Obs: é uma boa prática reverter a política de execução para o valor original para garantir a segurança do sistema
+
+```
+Set-ExecutionPolicy Restricted
+```
+
+4. Inicialização do JSON Server
+
+```
+json-server --watch backend/videos.json
+```
+
+5. Dentro da pasta /Front-End/JavaScript/AluraPlay abra o arquivo `index.html` no navegador.
 
 ## Tecnologias:
 

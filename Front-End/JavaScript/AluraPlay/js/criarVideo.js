@@ -11,8 +11,20 @@ async function criarVideo(evento) {
   const titulo = document.querySelector('[data-titulo]').value;
   const descricao = Math.floor(Math.random() * 10).toString();
 
-  await conectaApi.criaVideo(titulo, descricao, url, imagem);
-  window.location.href = '../pages/envio-concluido.html';
+  try {
+    await conectaApi.criaVideo(titulo, descricao, url, imagem);
+    window.location.href = '../pages/envio-concluido.html';
+  } catch {
+    formulario.innerHTML = `
+      <h2 class="mensagem__titulo">Não foi possível enviar o vídeo</h2>
+      <button class='botao__retornar' data-botao-retornar>Retornar</button>
+    `;
+
+    const botaoRetornar = document.querySelector('[data-botao-retornar]');
+    botaoRetornar.addEventListener('click', () => {
+      window.location.href = '../pages/enviar-video.html';
+    });
+  }
 }
 
 formulario.addEventListener('submit', (evento) => criarVideo(evento));

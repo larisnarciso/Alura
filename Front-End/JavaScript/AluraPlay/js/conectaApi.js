@@ -26,8 +26,9 @@ async function criaVideo(titulo, descricao, url, imagem) {
 
 // Função assíncrona buscar vídeo
 async function buscaVideo(termoDeBusca) {
-  const conexao = await fetch(`${endpointAPI}?q=${termoDeBusca}`);
-  const conexaoConvertida = conexao.json();
+  // const conexao = await fetch(`${endpointAPI}?q=${termoDeBusca}`);
+  const conexao = await fetch(`${endpointAPI}?id=${termoDeBusca}`);
+  const conexaoConvertida = await conexao.json();
   return conexaoConvertida;
 }
 

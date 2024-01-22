@@ -5,7 +5,7 @@ import { conectaApi } from './conectaApi.js';
 const lista = document.querySelector('[data-lista]');
 
 // Função que constrói um card de vídeo com base nos parâmetros fornecidos
-function constroiCard(titulo, descricao, url, imagem) {
+export default function constroiCard(titulo, descricao, url, imagem) {
   const video = document.createElement('li');
   video.className = 'videos__item';
   // Cria um iframe para incorporar o vídeo

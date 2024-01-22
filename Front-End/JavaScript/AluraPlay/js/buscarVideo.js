@@ -32,6 +32,10 @@ async function buscarVideo(evento) {
       )
     )
   );
+
+  if (busca.length == 0) {
+    lista.innerHTML = `<h2 class="mensagem__titulo">Não existem vídeos com esse termo<h2>`;
+  }
 }
 
 // Obtém a referência ao botão de pesquisa

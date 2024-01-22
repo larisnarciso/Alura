@@ -48,7 +48,7 @@ Set-ExecutionPolicy Restricted
 4. Inicialização do JSON Server
 
 ```
-json-server --watch backend/videos.json
+json-server --watch db.json
 ```
 
 5. Dentro da pasta /Front-End/JavaScript/AluraPlay abra o arquivo `index.html` no navegador.

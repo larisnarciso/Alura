@@ -5,13 +5,16 @@
 export default function ehUmCPF(campo) {
   // Remover pontos e traços do valor do CPF para facilitar a validação
   const cpf = campo.value.replace(/\.|-/g, '');
+
+  // Verifica se há números repetidos, se o primeiro dígito ou o segundo dígito são inválidos
   if (
     validaNumerosRepetidos(cpf) ||
     validaPrimeiroDigito(cpf) ||
     validaSegundoDigito(cpf)
-  )
-    console.log('Esse CPF não existe');
-  else console.log('Esse CPF existe');
+  ) {
+    // Configura a mensagem de validação personalizada
+    campo.setCustomValidity('Esse CPF não é válido');
+  }
 }
 
 /**

@@ -1,6 +1,9 @@
 // Importa a função ehUmCPF do módulo valida-cpf.js
 import ehUmCPF from './valida-cpf.js';
 
+// Importa a função ehMaiorDeIdade do módulo valida-idade.js
+import ehMaiorDeIdade from './valida-idade.js';
+
 // Seleciona todos os campos do formulário marcados como obrigatórios
 const camposDoFormulario = document.querySelectorAll('[required]');
 
@@ -18,5 +21,8 @@ function verificaCampo(campo) {
   if (campo.name == 'cpf' && campo.value.length >= 11) {
     // Chama a função ehUmCPF para validar o CPF
     ehUmCPF(campo);
+  }
+  if (campo.name == 'aniversario' && campo.value != '') {
+    ehMaiorDeIdade(campo);
   }
 }

@@ -1,5 +1,6 @@
 const botaoIniciarCamera = document.querySelector('[data-video-botao]');
 const botaoTirarFoto = document.querySelector('[data-tirar-foto]');
+const botaoEnviarFoto = document.querySelector('[data-enviar]');
 const campoCamera = document.querySelector('[data-camera]');
 const video = document.querySelector('[data-video]');
 const canvas = document.querySelector('[data-video-canvas]');
@@ -33,4 +34,19 @@ botaoTirarFoto.addEventListener('click', function () {
   // Esconde o campo da câmera e exibe a mensagem
   campoCamera.style.display = 'none';
   mensagem.style.display = 'block';
+});
+
+// Adiciona um ouvinte de evento 'click' ao botão de enviar foto
+botaoEnviarFoto.addEventListener('click', () => {
+  // Obtém os dados existentes no localStorage relacionados ao cadastro
+  const receberDadosExistentes = localStorage.getItem('cadastro');
+  // Converte os dados existentes de JSON para objeto JavaScript
+  const converteRetorno = JSON.parse(receberDadosExistentes);
+
+  // Adiciona a URL da imagem capturada aos dados do cadastro
+  converteRetorno.imagem = imagemURL;
+  // Atualiza os dados do cadastro no localStorage
+  localStorage.setItem('cadastro', JSON.stringify(converteRetorno));
+  // Redireciona para a próxima página do formulário
+  window.location.href = './abrir-conta-form-3.html';
 });

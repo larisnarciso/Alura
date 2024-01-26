@@ -8,7 +8,7 @@ Para visualizar o projeto, click no link: [MoniBank](https://larisnarciso.github
 
 ## Descrição
 
-O MoniBank é uma plataforma de banco, onde é simulado uma criação de conta.
+O MoniBank é uma plataforma de banco, onde é simulado uma criação de conta. Neste projeto foi práticado a validação de formulário.
 
 - Aplicar atributos de validação de formulário com HTML5
 - Validações para os dígitos verificadores do CPF

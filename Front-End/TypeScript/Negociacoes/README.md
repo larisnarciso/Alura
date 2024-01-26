@@ -1,10 +1,10 @@
-# [Negociacoes](https://larisnarciso.github.io/Alura/Front-End/TypeScript/Negociacoes/index.html)
+# [Negociacoes](https://larisnarciso.github.io/Alura/Front-End/TypeScript/Negociacoes/dist/index.html)
 
 ![Screenshot da tela inicial do Negociacoes](img/negociacoes.png)
 
 Projeto desenvolvido no curso de [TypeScript: Evoluindo seu JavaScript](https://cursos.alura.com.br/course/typescript-evoluindo-javascript).
 
-Para visualizar o projeto, click no link: [Negociacoes](https://larisnarciso.github.io/Alura/Front-End/TypeScript/Negociacoes/index.html)
+Para visualizar o projeto, click no link: [Negociacoes](https://larisnarciso.github.io/Alura/Front-End/TypeScript/Negociacoes/dist/index.html)
 
 ## Descrição
 

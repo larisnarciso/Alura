@@ -1,11 +1,28 @@
-// Importa a função ehUmCPF do módulo valida-cpf.js
 import ehUmCPF from './valida-cpf.js';
-
-// Importa a função ehMaiorDeIdade do módulo valida-idade.js
 import ehMaiorDeIdade from './valida-idade.js';
 
-// Seleciona todos os campos do formulário marcados como obrigatórios
 const camposDoFormulario = document.querySelectorAll('[required]');
+const formulario = document.querySelector('[data-formulario]');
+
+// Adiciona um ouvinte de evento 'submit' ao formulário
+formulario.addEventListener('submit', (e) => {
+  e.preventDefault(); // Impede o envio padrão do formulário
+
+  // Cria um objeto com as respostas do formulário
+  const listaRespostas = {
+    nome: e.target.elements['nome'].value,
+    email: e.target.elements['email'].value,
+    rg: e.target.elements['rg'].value,
+    cpf: e.target.elements['cpf'].value,
+    aniversario: e.target.elements['aniversario'].value,
+  };
+
+  // Armazena as respostas do formulário no localStorage como JSON
+  localStorage.setItem('cadastro', JSON.stringify(listaRespostas));
+
+  // Redireciona para a próxima página do formulário
+  window.location.href = './abrir-conta-form-2.html';
+});
 
 // Adiciona um ouvinte de evento 'blur' a cada campo do formulário
 // Retira mensagem padrão do js

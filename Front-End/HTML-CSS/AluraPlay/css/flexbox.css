@@ -78,3 +78,51 @@
     padding-top: 15px; /* Adiciona espaçamento no topo do contêiner */
   }
 }
+
+/* Responsivo (largura mínima de 1440px */
+@media (min-width: 1440px) {
+  .menu__container {
+    width: 239px;
+    overflow: scroll;
+  }
+
+  /* Exibe os itens de menu específicos */
+  .menu__lista:nth-child(2),
+  .menu__lista:nth-child(3),
+  .menu__lista:nth-child(4) {
+    display: flex;
+  }
+
+  /* Ajustes na lista de menu */
+  .menu__lista {
+    height: auto; /* Altura automática */
+    padding: 20px 17px 20px 15px; /* Espaçamento interno */
+    gap: 15px;
+  }
+
+  /* Itens do menu em telas largas */
+  .menu__itens {
+    flex-direction: row; /* Linha */
+    gap: 15px; /* Espaçamento */
+    align-items: center; /* Centralizado verticalmente */
+  }
+
+  /* Estilo inverso para o terceiro item da lista */
+  .menu__lista:nth-child(3) {
+    flex-direction: column-reverse; /* Coluna inversa */
+  }
+
+  /* Ordem dos itens internos */
+  .jogos {
+    order: 3;
+  }
+  .filmes {
+    order: 2;
+  }
+  .premium {
+    order: 1;
+  }
+  .maispagina {
+    order: 4;
+  }
+}

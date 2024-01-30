@@ -1,18 +1,37 @@
 /* Cabeçalho */
 .cabecalho__container {
-  display: flex; /* Configura o contêiner como um flex container, posicionando os elementos um ao lado do outro */
-  justify-content: space-between; /* Distribui o espaço igualmente entre os elementos do contêiner */
-  align-items: center; /* Alinha verticalmente os itens no centro do contêiner */
-  position: fixed; /* Fixa o contêiner na tela, mantendo-o visível independentemente do rolar da página */
-  top: 0; /* Posiciona o contêiner no topo da viewport */
+  display: flex; /* Alinha itens lado a lado, centraliza verticalmente */
+  justify-content: space-between; /* Espaço igual entre os elementos */
+  align-items: center; /* Alinhamento vertical no centro */
+  position: fixed; /* Fixo no topo da tela */
+  top: 0; /* Posicionamento no topo da viewport */
 }
 
 .cabecalho__pesquisar__item {
-  display: none; /* Oculta o item de pesquisa por padrão em telas menores que 834px de largura */
+  display: none; /* Oculto em telas < 834px */
 }
 
+/* Seção Superior */
+.superior__secao__container {
+  display: flex; /* Flex container: alinha itens lado a lado */
+  align-items: center; /* Alinhamento vertical no centro */
+  white-space: nowrap; /* Impede a quebra de texto para manter na mesma linha */
+  overflow: scroll; /* Adiciona rolagem horizontal se os itens não couberem */
+  gap: 15px; /* Define um espaçamento entre os itens */
+}
+
+/* Rodapé */
+.rodape__container {
+  display: flex; /* Flex container para layout responsivo */
+  flex-flow: wrap; /* Coluna em telas estreitas, quebra para a próxima linha se necessário, o mesmo que flex-drection: colum; flex-wrap: wrap; */
+}
+
+/* Responsivo (largura mínima de 834px) */
 @media (min-width: 834px) {
   .cabecalho__pesquisar__item {
-    display: block; /* Exibe o item de pesquisa */
+    display: block; /* Exibe o item de pesquisa no cabeçalho */
+  }
+  .rodape__container {
+    justify-content: space-between; /* Espaço igual entre os itens do rodapé */
   }
 }

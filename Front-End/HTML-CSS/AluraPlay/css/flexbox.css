@@ -11,6 +11,37 @@
   display: none; /* Oculto em telas < 834px */
 }
 
+/* Menu Lateral */
+.menu__container {
+  position: fixed; /* Fixa o menu na tela, independente do rolar da página */
+  bottom: 0%; /* Posiciona o menu na parte inferior da tela */
+  height: 74px; /* Altura do menu */
+  width: 100%; /* Largura total da tela */
+}
+
+.menu__lista {
+  display: flex; /* Exibe os itens da lista em linha */
+  justify-content: space-around; /* Distribui o espaço igualmente entre os itens */
+  height: 100%; /* A altura da lista é 100% da altura do contêiner pai */
+}
+
+.menu__lista li {
+  align-self: center; /* Alinha verticalmente os itens no centro da lista */
+}
+
+.menu__itens {
+  display: flex; /* Exibe os itens em linha */
+  flex-direction: column; /* Organiza os itens na direção vertical */
+  gap: 5px; /* Adiciona um espaçamento de 5 pixels entre os itens */
+}
+
+/* Esconde itens específicos do menu */
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+  display: none; /* Oculta o segundo, terceiro e quarto itens da lista */
+}
+
 /* Seção Superior */
 .superior__secao__container {
   display: flex; /* Flex container: alinha itens lado a lado */
@@ -23,7 +54,7 @@
 /* Rodapé */
 .rodape__container {
   display: flex; /* Flex container para layout responsivo */
-  flex-flow: wrap; /* Coluna em telas estreitas, quebra para a próxima linha se necessário, o mesmo que flex-drection: colum; flex-wrap: wrap; */
+  flex-flow: column wrap; /* Coluna em telas estreitas, quebra para a próxima linha se necessário, o mesmo que flex-drection: colum; flex-wrap: wrap; */
 }
 
 /* Responsivo (largura mínima de 834px) */

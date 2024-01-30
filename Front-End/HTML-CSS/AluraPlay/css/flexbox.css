@@ -52,9 +52,16 @@
 }
 
 /* VIDEO */
+.videos__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espaçamento entre os itens */
+}
+
 .videos__item {
   height: 303px;
   width: 280px;
+  flex-grow: 1; /* Cresce para preencher espaço disponível */
 }
 
 /* FOOTER */

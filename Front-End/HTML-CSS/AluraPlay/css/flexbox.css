@@ -1,4 +1,4 @@
-/* Cabeçalho */
+/* HEADER */
 .cabecalho__container {
   display: flex; /* Alinha itens lado a lado, centraliza verticalmente */
   justify-content: space-between; /* Espaço igual entre os elementos */
@@ -11,7 +11,7 @@
   display: none; /* Oculto em telas < 834px */
 }
 
-/* Menu Lateral */
+/* MENU LATERAL */
 .menu__container {
   position: fixed; /* Fixa o menu na tela, independente do rolar da página */
   bottom: 0%; /* Posiciona o menu na parte inferior da tela */
@@ -42,7 +42,7 @@
   display: none; /* Oculta o segundo, terceiro e quarto itens da lista */
 }
 
-/* Seção Superior */
+/* SEÇÃO SUPERIOR */
 .superior__secao__container {
   display: flex; /* Flex container: alinha itens lado a lado */
   align-items: center; /* Alinhamento vertical no centro */
@@ -51,13 +51,19 @@
   gap: 15px; /* Define um espaçamento entre os itens */
 }
 
-/* Rodapé */
+/* VIDEO */
+.videos__item {
+  height: 303px;
+  width: 280px;
+}
+
+/* FOOTER */
 .rodape__container {
   display: flex; /* Flex container para layout responsivo */
   flex-flow: column wrap; /* Coluna em telas estreitas, quebra para a próxima linha se necessário, o mesmo que flex-drection: colum; flex-wrap: wrap; */
 }
 
-/* Responsivo (largura mínima de 834px) */
+/* RESPONSIVO (largura mínima de 834px) */
 @media (min-width: 834px) {
   .cabecalho__pesquisar__item {
     display: block; /* Exibe o item de pesquisa no cabeçalho */
@@ -79,7 +85,7 @@
   }
 }
 
-/* Responsivo (largura mínima de 1440px */
+/* RESPONSIVO (largura mínima de 1440px */
 @media (min-width: 1440px) {
   .menu__container {
     width: 239px;

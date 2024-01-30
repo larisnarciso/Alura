@@ -1,6 +1,6 @@
 # [AluraPlay](https://larisnarciso.github.io/Alura/Front-End/HTML-CSS/AluraPlay/index.html))
 
-![Screenshot da tela inicial do AluraPlay](https://imgur.com/aymxEsh.png)
+![Screenshot da tela inicial do AluraPlay](./img/aluraplay.png)
 
 Projeto desenvolvido no curso de [CSS: Flexbox e layouts responsivos](https://cursos.alura.com.br/course/css-flexbox-layouts-responsivos).
 

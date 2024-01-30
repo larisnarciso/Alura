@@ -1,6 +1,6 @@
 # [WaveCast](https://larisnarciso.github.io/Alura/Front-End/HTML-CSS/WaveCast/index.html))
 
-![Screenshot da tela inicial do WaveCast](./img/WaveCast.png)
+![Screenshot da tela inicial do WaveCast](./src/imagens/WaveCast.png)
 
 Projeto desenvolvido no curso de [CSS: construindo layouts com Grid](https://cursos.alura.com.br/course/css-construindo-layouts-com-grid).
 

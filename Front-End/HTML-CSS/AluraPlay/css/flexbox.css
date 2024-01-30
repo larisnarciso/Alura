@@ -1,1 +1,18 @@
+/* Cabeçalho */
+.cabecalho__container {
+  display: flex; /* Configura o contêiner como um flex container, posicionando os elementos um ao lado do outro */
+  justify-content: space-between; /* Distribui o espaço igualmente entre os elementos do contêiner */
+  align-items: center; /* Alinha verticalmente os itens no centro do contêiner */
+  position: fixed; /* Fixa o contêiner na tela, mantendo-o visível independentemente do rolar da página */
+  top: 0; /* Posiciona o contêiner no topo da viewport */
+}
 
+.cabecalho__pesquisar__item {
+  display: none; /* Oculta o item de pesquisa por padrão em telas menores que 834px de largura */
+}
+
+@media (min-width: 834px) {
+  .cabecalho__pesquisar__item {
+    display: block; /* Exibe o item de pesquisa */
+  }
+}

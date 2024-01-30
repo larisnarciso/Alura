@@ -65,4 +65,16 @@
   .rodape__container {
     justify-content: space-between; /* Espaço igual entre os itens do rodapé */
   }
+  .menu__container {
+    left: 0; /* Posiciona o menu na parte esquerda da tela */
+    top: 80px;
+    height: auto; /* Altura do menu */
+    width: 74px; /* Largura total da tela */
+  }
+  .menu__lista {
+    flex-direction: column; /* Itens dispostos em coluna */
+    justify-content: flex-start; /* Alinha os itens ao início do contêiner */
+    gap: 33px; /* Adiciona espaçamento entre os itens */
+    padding-top: 15px; /* Adiciona espaçamento no topo do contêiner */
+  }
 }

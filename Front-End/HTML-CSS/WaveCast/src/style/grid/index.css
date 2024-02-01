@@ -1,9 +1,7 @@
 body {
-  display: grid;
-  grid-template-areas:
-    'aside header'
-    'aside main';
-  grid-template-columns: auto 1fr;
+  display: grid; /* Define um layout de grid para o corpo do documento */
+  grid-template-areas: 'aside header' 'aside main'; /* Especifica as áreas do grid */
+  grid-template-columns: auto 1fr; /* Define as colunas, 'auto' para a área lateral e '1fr' para a principal */
 }
 
 .cabecalho {

@@ -1,10 +1,10 @@
-# [WaveCast](https://larisnarciso.github.io/Alura/Front-End/HTML-CSS/WaveCast/index.html))
+# [WaveCast](https://larisnarciso.github.io/Alura/Front-End/CSS/WaveCast/index.html))
 
 ![Screenshot da tela inicial do WaveCast](./src/imagens/WaveCast.png)
 
 Projeto desenvolvido no curso de [CSS: construindo layouts com Grid](https://cursos.alura.com.br/course/css-construindo-layouts-com-grid).
 
-Para visualizar o projeto, click no link: [WaveCast](https://larisnarciso.github.io/Alura/Front-End/HTML-CSS/WaveCast/index.html)
+Para visualizar o projeto, click no link: [WaveCast](https://larisnarciso.github.io/Alura/Front-End/CSS/WaveCast/index.html)
 
 ## Descrição
 
@@ -25,7 +25,7 @@ O projeto WaveCast é uma página responsiva dedicada a podcasts. A essência do
 https://github.com/larisnarciso/Alura.git
 ```
 
-2. Dentro da pasta /Front-End/HTML-CSS/WaveCast abra o arquivo `index.html` no navegador.
+2. Dentro da pasta /Front-End/CSS/WaveCast abra o arquivo `index.html` no navegador.
 
 ## Tecnologias:
 

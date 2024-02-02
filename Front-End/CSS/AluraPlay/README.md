@@ -1,10 +1,10 @@
-# [AluraPlay](https://larisnarciso.github.io/Alura/Front-End/HTML-CSS/AluraPlay/index.html))
+# [AluraPlay](https://larisnarciso.github.io/Alura/Front-End/CSS/AluraPlay/index.html))
 
 ![Screenshot da tela inicial do AluraPlay](./img/aluraplay.png)
 
 Projeto desenvolvido no curso de [CSS: Flexbox e layouts responsivos](https://cursos.alura.com.br/course/css-flexbox-layouts-responsivos).
 
-Para visualizar o projeto, click no link: [AluraPlay](https://larisnarciso.github.io/Alura/Front-End/HTML-CSS/AluraPlay/index.html)
+Para visualizar o projeto, click no link: [AluraPlay](https://larisnarciso.github.io/Alura/Front-End/CSS/AluraPlay/index.html)
 
 ## Descrição
 
@@ -18,7 +18,7 @@ O AluraPlay é uma plataforma de compartilhamento de vídeos que inclui elemento
 https://github.com/larisnarciso/Alura.git
 ```
 
-2. Dentro da pasta /Front-End/HTML-CSS/AluraPlay abra o arquivo `index.html` no navegador.
+2. Dentro da pasta /Front-End/CSS/AluraPlay abra o arquivo `index.html` no navegador.
 
 ## Tecnologias:
 

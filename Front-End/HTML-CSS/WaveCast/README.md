@@ -1,4 +1,4 @@
-# [WaveCast](https://larisnarciso.github.io/Alura/Front-End/HTML-CSS/WaveCast/index.html))
+# [WaveCast](https://larisnarciso.github.io/Alura/Front-End/HTML-CSS/WaveCast/index.html)
 
 ![Screenshot da tela inicial do WaveCast](./src/imagens/WaveCast.png)
 

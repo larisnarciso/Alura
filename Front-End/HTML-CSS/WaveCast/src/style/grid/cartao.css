@@ -1,0 +1,22 @@
+.secao-horizontal .cartao {
+  display: grid; /* Utiliza um layout de grid para .cartao dentro de .secao-horizontal */
+  grid-template-columns: auto 1fr auto; /* Define as colunas */
+  grid-template-rows: auto 3rem 0.9rem; /* Define as linhas */
+}
+
+/* grid-area: linha inicial / coluna inicial / linha final / coluna final * */
+.secao-horizontal .cartao__imagem {
+  grid-area: 1 / 1 / 4 / 2;
+}
+
+.secao-horizontal .cartao__titulo {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.secao-horizontal .cartao__botao {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.secao-horizontal .cartao__player {
+  grid-area: 3 / 2 / 4 / 3;
+}

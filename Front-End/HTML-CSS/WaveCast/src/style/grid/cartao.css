@@ -2,6 +2,7 @@
   display: grid; /* Utiliza um layout de grid para .cartao dentro de .secao-horizontal */
   grid-template-columns: auto 1fr auto; /* Define as colunas */
   grid-template-rows: auto 3rem 0.9rem; /* Define as linhas */
+  column-gap: 1.25rem;
 }
 
 /* grid-area: linha inicial / coluna inicial / linha final / coluna final * */

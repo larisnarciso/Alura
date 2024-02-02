@@ -101,6 +101,10 @@ main {
   user-select: none;
 }
 
+section:not(:first-of-type) {
+  padding-top: 3rem;
+}
+
 .cartao {
   background: var(--cinza);
   border-radius: 0.5rem;

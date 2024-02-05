@@ -31,6 +31,10 @@ header nav ul a {
   font-size: 1rem;
   color: #0c0421;
   font-weight: 500;
+  transition: font-weight 0.1s;
+}
+header nav ul a:hover {
+  font-weight: 800;
 }
 header #home {
   max-width: 1040px;
@@ -59,8 +63,12 @@ header #home .textos-home .btn-main {
   border: none;
   outline: none;
   border-radius: 66px;
-  background: #cad4fa;
+  background: #85a0ff;
   font-size: 1.3rem;
+  transition: 0.3s background-color;
+}
+header #home .textos-home .btn-main:hover {
+  background-color: #4e75ff;
 }
 header #home .img-home {
   max-width: 474px;

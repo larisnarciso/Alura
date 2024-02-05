@@ -32,6 +32,10 @@ header {
           variaveis.$cor-primaria
         );
         font-weight: 500;
+        transition: font-weight 0.1s;
+        &:hover {
+          font-weight: 800;
+        }
       }
     }
   }
@@ -64,8 +68,12 @@ header {
         border: none;
         outline: none;
         border-radius: 66px;
-        background: variaveis.$cor-default;
+        background: variaveis.$cor-terciaria;
         font-size: 1.3rem;
+        transition: 0.3s background-color;
+        &:hover {
+          background-color: variaveis.$cor-secundaria;
+        }
       }
     }
 

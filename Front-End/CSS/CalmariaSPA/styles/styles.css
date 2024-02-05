@@ -45,7 +45,7 @@ header #home .textos-home {
 header #home .textos-home h1 {
   color: #0c0421;
   font-family: "Krona One", sans-serif;
-  font-size: 42px;
+  font-size: 2.625rem;
   margin-bottom: 2rem;
 }
 header #home .textos-home h1 span {
@@ -56,4 +56,19 @@ header #home .img-home {
 }
 header #home .img-home img {
   width: 100%;
+}
+header #home .btn-main {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: white;
+  background-color: #4e75ff;
+  border: none;
+  border-radius: 40px;
+  padding: 24px;
+  width: 280px;
+  cursor: pointer;
+}
+header #home .btn-main:hover {
+  background-color: #85a0ff;
 }/*# sourceMappingURL=styles.css.map */

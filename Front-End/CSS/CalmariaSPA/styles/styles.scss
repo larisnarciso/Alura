@@ -59,7 +59,7 @@ header {
       h1 {
         color: $cor-primaria;
         font-family: $ft-titulos;
-        font-size: 42px;
+        font-size: 2.625rem;
         margin-bottom: 2rem;
         span {
           color: $cor-secundaria;
@@ -71,6 +71,21 @@ header {
       img {
         width: 100%;
       }
+    }
+    .btn-main {
+      font-family: $ft-textos;
+      font-size: 1.375rem;
+      font-weight: 600;
+      color: white;
+      background-color: $cor-secundaria;
+      border: none;
+      border-radius: 40px;
+      padding: 24px;
+      width: 280px;
+      cursor: pointer;
+    }
+    .btn-main:hover {
+      background-color: $cor-terciaria;
     }
   }
 }

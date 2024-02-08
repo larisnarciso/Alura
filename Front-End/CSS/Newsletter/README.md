@@ -8,7 +8,7 @@ Para visualizar o projeto, click no link: [Newsletter](https://larisnarciso.gith
 
 ## Descrição
 
-O projeto Newsletter é uma página desenvolvida utilizando o SASS, um pré-processador de CSS. O SASS proporciona recursos adicionais ao CSS, facilitando a reutilização e aplicação de estilos de forma mais eficiente.
+O projeto Newsletter é uma página desenvolvida utilizando o Framework Tailwind.
 
 ## Instruções:
 

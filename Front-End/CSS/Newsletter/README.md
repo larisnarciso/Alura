@@ -1,6 +1,6 @@
 # [Newsletter](https://larisnarciso.github.io/Alura/Front-End/CSS/Newsletter/index.html)
 
-![Screenshot da tela inicial do Newsletter](./assets/Newsletter.png)
+![Screenshot da tela inicial do Newsletter](./image/Newsletter.png)
 
 Projeto desenvolvido no curso de [Tailwind CSS: estilizando a sua página com classes utilitárias](https://cursos.alura.com.br/course/tailwind-css-estilizando-pagina-classes-utilitarias).
 
@@ -8,7 +8,7 @@ Para visualizar o projeto, click no link: [Newsletter](https://larisnarciso.gith
 
 ## Descrição
 
-O projeto Newsletter é uma página desenvolvida utilizando o Framework Tailwind.
+O projeto Newsletter é uma página desenvolvida utilizando o Framework ![Tailwind](https://tailwindcss.com/docs/installation).
 
 ## Instruções:
 

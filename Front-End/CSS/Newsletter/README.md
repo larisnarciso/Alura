@@ -8,7 +8,7 @@ Para visualizar o projeto, click no link: [Newsletter](https://larisnarciso.gith
 
 ## Descrição
 
-O projeto Newsletter é uma página desenvolvida utilizando o Framework ![Tailwind](https://tailwindcss.com/docs/installation).
+O projeto Newsletter é uma página desenvolvida com o auxílio do framework [Tailwind CSS](https://tailwindcss.com/docs/installation), que facilitou significativamente a implementação e o design. A utilização do Tailwind permitiu uma abordagem prática e eficiente para estilizar os elementos da página, proporcionando uma experiência de desenvolvimento fluida e ágil.
 
 ## Instruções:
 

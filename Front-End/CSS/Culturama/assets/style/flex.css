@@ -25,8 +25,9 @@
   flex-grow: 1;
 }
 
-/* EVENTOS */
-.eventos__lista {
+/* EVENTOS/AGENDA */
+.eventos__lista,
+.agenda__lista {
   display: flex;
   flex-wrap: wrap;
   column-gap: 1.5rem;
@@ -34,8 +35,12 @@
   justify-content: center;
 }
 
-.eventos__item {
+.eventos__item,
+.agenda__item {
   flex-grow: 1;
+}
+
+.eventos__item {
   max-width: 400px;
 }
 
@@ -49,7 +54,8 @@
     column-gap: 1.5rem;
     row-gap: 1rem;
   }
-  .eventos__lista {
+  .eventos__lista,
+  .agenda__lista {
     justify-content: end;
   }
 }
@@ -74,5 +80,8 @@
   }
   .menu__item:nth-child(5) {
     order: 2;
+  }
+  .agenda__lista {
+    justify-content: center;
   }
 }

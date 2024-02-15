@@ -18,7 +18,20 @@ O Negociacoes é um pequeno projeto de bolsa de valores, que permite cadastrar u
 https://github.com/larisnarciso/Alura.git
 ```
 
-2. Dentro da pasta /Front-End/TypeScript/Negociacoes/dist abra o arquivo `index.html` no navegador.
+2. Abra a pasta /Front-End/TypeScript/Negociacoes no Visual Studio Code (VSCode).
+
+3. Instale as dependências:
+
+```
+cd Alura/Front-End/TypeScript/Negociacoes
+npm install
+```
+
+4. Inicie o servidor:
+
+```
+npm run server
+```
 
 ## Tecnologias:
 

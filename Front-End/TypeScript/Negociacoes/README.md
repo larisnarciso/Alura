@@ -30,7 +30,7 @@ npm install
 4. Inicie o servidor:
 
 ```
-npm run server
+npm run start
 ```
 
 ## Tecnologias:

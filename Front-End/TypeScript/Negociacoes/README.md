@@ -3,7 +3,8 @@
 ![Screenshot da tela inicial do Negociacoes](img/negociacoes.png)
 
 Projeto desenvolvido nos cursos:
-- [TypeScript: Evoluindo seu JavaScript](https://cursos.alura.com.br/course/typescript-evoluindo-javascript) 
+
+- [TypeScript: Evoluindo seu JavaScript](https://cursos.alura.com.br/course/typescript-evoluindo-javascript)
 - [TypeScript: Avançando na linguagem](https://cursos.alura.com.br/course/typescript-avancando-linguagem)
 - [TypeScript: Mais técnicas e boas práticas](https://cursos.alura.com.br/course/typescript-tecnicas-boas-praticas)
 
@@ -12,6 +13,10 @@ Para visualizar o projeto, click no link: [Negociacoes](https://larisnarciso.git
 ## Descrição
 
 O Negociacoes é um pequeno projeto de bolsa de valores, que permite cadastrar uma data, quantidade e valor de uma negociação.
+
+- Não pode ser modificada depois de criada.
+- Obrigatoriamente tem uma data, quantidade e valor.
+- Seu volume é calculado multiplicando-se a quantidade negociada no dia pelo valor negociado.
 
 ## Instalação:
 

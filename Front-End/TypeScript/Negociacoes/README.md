@@ -3,9 +3,9 @@
 ![Screenshot da tela inicial do Negociacoes](img/negociacoes.png)
 
 Projeto desenvolvido nos cursos:
-[TypeScript: Evoluindo seu JavaScript](https://cursos.alura.com.br/course/typescript-evoluindo-javascript)
-[TypeScript: Avançando na linguagem](https://cursos.alura.com.br/course/typescript-avancando-linguagem)
-[TypeScript: Mais técnicas e boas práticas](https://cursos.alura.com.br/course/typescript-tecnicas-boas-praticas)
+- [TypeScript: Evoluindo seu JavaScript](https://cursos.alura.com.br/course/typescript-evoluindo-javascript) 
+- [TypeScript: Avançando na linguagem](https://cursos.alura.com.br/course/typescript-avancando-linguagem)
+- [TypeScript: Mais técnicas e boas práticas](https://cursos.alura.com.br/course/typescript-tecnicas-boas-praticas)
 
 Para visualizar o projeto, click no link: [Negociacoes](https://larisnarciso.github.io/Alura/Front-End/TypeScript/Negociacoes/dist/index.html)
 

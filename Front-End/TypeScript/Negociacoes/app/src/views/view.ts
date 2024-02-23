@@ -10,8 +10,8 @@ export abstract class View<T> {
     else throw Error(`Seletor ${seletor} não existe no DOM. Verifique`);
   }
 
-  @logarTempoDeExecucao(true)
-  @inspect()
+  // @logarTempoDeExecucao(true)
+  // @inspect()
   public update(model: T): void {
     let template = this.template(model);
     this.elemento.innerHTML = template;

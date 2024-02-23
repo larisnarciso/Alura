@@ -41,6 +41,13 @@ npm install
 npm run start
 ```
 
+5. Iniciar a API
+
+```
+cd servidor-api
+npm start
+```
+
 ## Tecnologias:
 
 ![TYPESCRIPT](https://img.shields.io/badge/TypeScript-%2320232a.svg?style=for-the-badge&logo=typescript&logoColor=007ACC)

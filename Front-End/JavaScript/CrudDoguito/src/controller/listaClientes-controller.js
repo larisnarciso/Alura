@@ -17,24 +17,28 @@ const criaNovaLinha = (nome, email, id) => {
 
 const tabela = document.querySelector('[data-tabela]');
 
-tabela.addEventListener('click', (event) => {
+tabela.addEventListener('click', async (event) => {
   if (event.target.classList.contains('botao-simples--excluir')) {
     const linhaCliente = event.target.closest('[data-id]');
     const id = linhaCliente.dataset.id;
-    clienteService
-      .removeCliente(id)
-      .then(() => linhaCliente.remove())
-      .catch((error) => console.error('Erro ao excluir cliente:', error));
+    try {
+      await clienteService.removeCliente(id);
+      linhaCliente.remove();
+    } catch (error) {
+      console.error('Erro ao excluir cliente:', error);
+    }
   }
 });
 
-const adicionarClientesNaTabela = (clientes) => {
-  clientes.forEach(({ nome, email, id }) => {
+const adicionarClientesNaTabela = async (clientes) => {
+  for (const { nome, email, id } of clientes) {
     tabela.appendChild(criaNovaLinha(nome, email, id));
-  });
+  }
 };
 
-clienteService
-  .listaClientes()
-  .then(adicionarClientesNaTabela)
-  .catch((error) => console.error('Erro ao carregar clientes:', error));
+try {
+  const clientes = await clienteService.listaClientes();
+  await adicionarClientesNaTabela(clientes);
+} catch (error) {
+  console.error('Erro ao carregar clientes:', error);
+}

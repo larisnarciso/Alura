@@ -13,18 +13,10 @@ const criaNovaLinha = (nome, email) => {
   return linhaNovoCliente;
 };
 
-const listaClientes = () => {
-  const promise = new Promise((resolve, reject) => {
-    const http = new XMLHttpRequest();
-    http.open('GET', 'http://localhost:3000/profile');
-    http.onload = () => {
-      const data = JSON.parse(http.response);
-      if (http.status >= 400) reject(JSON.parse(http.response));
-      else resolve(JSON.parse(http.response));
-    };
-    http.send();
-  });
-  return promise;
+const listaClientes = async () => {
+  const response = await fetch(`http://localhost:3000/profile`);
+  const json = await response.json();
+  return json;
 };
 
 const tabela = document.querySelector('[data-tabela]');

@@ -42,7 +42,7 @@ const removeCliente = async (id) => {
 };
 
 // Função assíncrona para editar um cliente na API
-const editaCliente = async (id) => {
+const exibeDadosCliente = async (id) => {
   // Faz uma requisição GET para o endpoint específico do cliente na API
   const conexao = await fetch(`${endpointAPI}/${id}`);
   // Aguarda a resposta do servidor e converte o corpo da resposta para JSON
@@ -51,10 +51,24 @@ const editaCliente = async (id) => {
   return conexaoConvertida;
 };
 
+const atualizaCliente = async (id, nome, email) => {
+  const conexao = await fetch(`${endpointAPI}/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-type': 'application/json' },
+    body: JSON.stringify({
+      nome: nome,
+      email: email,
+    }),
+  });
+  const conexaoConvertida = await conexao.json();
+  return conexaoConvertida;
+};
+
 // Objeto que exporta as funções
 export const clienteService = {
   listaClientes,
   criaCliente,
   removeCliente,
-  editaCliente,
+  exibeDadosCliente,
+  atualizaCliente,
 };

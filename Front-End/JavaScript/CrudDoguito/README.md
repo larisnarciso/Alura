@@ -1,6 +1,6 @@
 # [CRUD - Doguito](https://larisnarciso.github.io/Alura/Front-End/JavaScript/CrudDoguito/src/telas/lista_cliente.html)
 
-![Doguito](./imagens/doguito.png)
+![Doguito](src/assets/img/doguito.png)
 
 Projeto desenvolvido no curso de [JS na web: CRUD com JavaScript assíncrono](https://cursos.alura.com.br/course/javascript-crud-assincrono).
 

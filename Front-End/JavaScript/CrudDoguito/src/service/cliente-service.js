@@ -1,34 +1,45 @@
+// Definição do endpoint da API
 const endpointAPI = `http://localhost:3000/profile`;
 
-// Exporta uma função assíncrona chamada listaClientes que realiza uma requisição para o endpoint http://localhost:3000/profile.
-// Aguarda a resposta do servidor e converte o corpo da resposta para o formato JSON.
-// Retorna os dados JSON obtidos do servidor.
+// Função assíncrona que busca e lista os clientes da API
 const listaClientes = async () => {
-  const response = await fetch(endpointAPI);
-  const json = await response.json();
-  return json;
+  // Faz uma requisição GET para o endpoint da API
+  const conexao = await fetch(endpointAPI);
+  // Aguarda a resposta do servidor e converte o corpo da resposta para JSON
+  const conexaoConvertida = await conexao.json();
+  // Retorna os dados JSON obtidos do servidor
+  return conexaoConvertida;
 };
 
-// Esta função assíncrona cria um novo cliente no servidor utilizando o método HTTP POST.
-// Recebe o nome e o email do cliente como parâmetros.
-// Faz uma requisição para o endpoint especificado pela variável 'endpointAPI'.
-// Envia os dados do novo cliente no corpo da requisição em formato JSON.
-// Aguarda a resposta do servidor e converte o corpo da resposta para o formato JSON.
-// Retorna os dados do cliente criado, conforme a resposta do servidor.
+// Função assíncrona para criar um novo cliente na API
 const criaCliente = async (nome, email) => {
+  // Faz uma requisição POST para o endpoint da API, enviando os dados do novo cliente
   const conexao = await fetch(endpointAPI, {
     method: 'POST',
     headers: { 'Content-type': 'application/json' },
+    // Converte os dados do novo cliente para o formato JSON e envia no corpo da requisição
     body: JSON.stringify({
       nome: nome,
       email: email,
     }),
   });
+  // Aguarda a resposta do servidor e converte o corpo da resposta para JSON
+  const conexaoConvertida = await conexao.json();
+  // Retorna os dados do cliente criado conforme a resposta do servidor
+  return conexaoConvertida;
+};
+
+const removeCliente = async (id) => {
+  const conexao = await fetch(`${endpointAPI}/${id}`, {
+    method: 'DELETE',
+  });
   const conexaoConvertida = await conexao.json();
   return conexaoConvertida;
 };
 
+// Objeto que exporta as funções
 export const clienteService = {
   listaClientes,
   criaCliente,
+  removeCliente,
 };

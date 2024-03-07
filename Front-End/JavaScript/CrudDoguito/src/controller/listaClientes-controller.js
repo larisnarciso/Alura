@@ -1,23 +1,40 @@
 import { clienteService } from '../service/cliente-service.js';
 
-const criaNovaLinha = (nome, email) => {
+const criaNovaLinha = (nome, email, id) => {
   const linhaNovoCliente = document.createElement('tr');
-  const conteudo = `
-  <td class="td" data-td>${nome}</td>
+  linhaNovoCliente.innerHTML = `
+    <td class="td" data-td>${nome}</td>
     <td>${email}</td>
-      <td>
+    <td>
       <ul class="tabela__botoes-controle">
         <li><a href="../telas/edita_cliente.html" class="botao-simples botao-simples--editar">Editar</a></li>
         <li><button class="botao-simples botao-simples--excluir" type="button">Excluir</button></li>
-     </ul>
+      </ul>
     </td>`;
-  linhaNovoCliente.innerHTML = conteudo;
+  linhaNovoCliente.dataset.id = id;
   return linhaNovoCliente;
 };
 
 const tabela = document.querySelector('[data-tabela]');
-clienteService.listaClientes().then((data) => {
-  data.forEach((elemento) => {
-    tabela.appendChild(criaNovaLinha(elemento.nome, elemento.email));
-  });
+
+tabela.addEventListener('click', (event) => {
+  if (event.target.classList.contains('botao-simples--excluir')) {
+    const linhaCliente = event.target.closest('[data-id]');
+    const id = linhaCliente.dataset.id;
+    clienteService
+      .removeCliente(id)
+      .then(() => linhaCliente.remove())
+      .catch((error) => console.error('Erro ao excluir cliente:', error));
+  }
 });
+
+const adicionarClientesNaTabela = (clientes) => {
+  clientes.forEach(({ nome, email, id }) => {
+    tabela.appendChild(criaNovaLinha(nome, email, id));
+  });
+};
+
+clienteService
+  .listaClientes()
+  .then(adicionarClientesNaTabela)
+  .catch((error) => console.error('Erro ao carregar clientes:', error));

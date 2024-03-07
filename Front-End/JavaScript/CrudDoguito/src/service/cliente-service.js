@@ -29,11 +29,25 @@ const criaCliente = async (nome, email) => {
   return conexaoConvertida;
 };
 
+// Função assíncrona para remover um cliente na API
 const removeCliente = async (id) => {
+  // Faz uma requisição DELETE para o endpoint específico do cliente na API
   const conexao = await fetch(`${endpointAPI}/${id}`, {
     method: 'DELETE',
   });
+  // Aguarda a resposta do servidor e converte o corpo da resposta para JSON
   const conexaoConvertida = await conexao.json();
+  // Retorna os dados da remoção do cliente conforme a resposta do servidor
+  return conexaoConvertida;
+};
+
+// Função assíncrona para editar um cliente na API
+const editaCliente = async (id) => {
+  // Faz uma requisição GET para o endpoint específico do cliente na API
+  const conexao = await fetch(`${endpointAPI}/${id}`);
+  // Aguarda a resposta do servidor e converte o corpo da resposta para JSON
+  const conexaoConvertida = await conexao.json();
+  // Retorna os dados do cliente conforme a resposta do servidor
   return conexaoConvertida;
 };
 
@@ -42,4 +56,5 @@ export const clienteService = {
   listaClientes,
   criaCliente,
   removeCliente,
+  editaCliente,
 };

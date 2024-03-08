@@ -6,7 +6,7 @@
   --lils: #b872ff;
   --linear-botes: linear-gradient(180deg, #b872ff 0%, #144480 100%);
   --azul-profundo: #01080e;
-  --fundo-card: rgba(255, 255, 255, 0.5);
+  --fundo-card: rgba(20, 68, 128, 0.3);
   --fundo-card-concludo: rgba(0, 244, 191, 0.4);
 }
 
@@ -141,7 +141,7 @@ h6 {
 .app__card-timer {
   color: var(--color-secondary);
   text-align: center;
-  font-family: Unbounded;
+  font-family: Montserrat;
   font-size: 12rem;
   font-style: normal;
   font-weight: 700;
@@ -361,6 +361,7 @@ h6 {
   line-height: 150%;
   white-space: nowrap;
   font-family: Montserrat;
+  color: #cbcbcb;
 }
 
 .app__section-active-task-description {
@@ -374,7 +375,8 @@ h6 {
 .app__section-tasks-heading {
   font-size: 2.6rem;
   font-style: normal;
-  font-weight: 400;
+  font-family: Montserrat;
+  font-weight: 600;
   line-height: 120%;
 }
 
@@ -426,7 +428,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-  color: var(--azul-profundo);
+  color: var(--color-secondary);
   font-family: Montserrat;
 }
 
@@ -436,7 +438,7 @@ h6 {
 }
 
 .app__section-task-list-item-active.app__section-task-list-item {
-  border: 2px solid #fff;
+  border: 0.2rem solid var(--azul-royal);
 }
 
 .app__section-task-list-item-complete .app__section-task-icon-status circle {
@@ -445,21 +447,22 @@ h6 {
 
 .app__form-add-task {
   padding: 1.6rem;
-  border-radius: 0.8rem;
   background: var(--fundo-card);
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
   font-family: Montserrat;
+  border-radius: 0.8rem;
+  border: 0.2rem solid var(--azul-royal);
 }
 
 .app__form-label {
-  color: var(--azul-profundo);
-  font-family: Unbounded;
+  color: var(--color-secondary);
+  font-family: Montserrat;
   font-size: 2.6rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 120%;
   display: block;
   margin-bottom: 3.2rem;
@@ -468,8 +471,11 @@ h6 {
 .app__form-textarea {
   width: 100%;
   border-radius: 0.8rem;
+  border: 0.2rem solid var(--lils);
   padding: 0.8rem;
   background: #98a0a8;
+  background-color: transparent;
+  color: white;
 }
 
 .app__form-footer {
@@ -484,27 +490,21 @@ h6 {
   flex-grow: 1;
 }
 
-.app__form-footer__button {
+.app__form-footer__button,
+.app__form-footer__button--confirm {
   border: none;
   cursor: pointer;
   outline: inherit;
   background-color: transparent;
   display: flex;
   align-items: center;
-  color: var(--azul-profundo);
+  color: var(--color-secondary);
   font-family: Montserrat;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
   gap: 0.8rem;
-}
-
-.app__form-footer__button--confirm {
-  border-radius: 3.2rem;
-  padding: 0.8rem 2.4rem;
-  color: #fff;
-  background: var(--azul-profundo);
 }
 
 .app__button--add-task {

@@ -18,7 +18,7 @@ Organo
 https://github.com/larisnarciso/Alura.git
 ```
 
-2. Abra a pasta /Front-End/React/Organo no vscode
+2. Abra a pasta /Front-End/React/Organo no Vscode
 
 3. Caso não tenha o Node.js, baixe-o.
 
@@ -46,6 +46,8 @@ npm install
 ```
 npm start
 ```
+
+6. Abra [http://localhost:3000](http://localhost:3000) para visualizar no browser
 
 ## Tecnologias:
 

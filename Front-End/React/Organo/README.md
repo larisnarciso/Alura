@@ -6,6 +6,8 @@ Projeto desenvolvido no curso de [React: desenvolvendo com JavaScript](https://c
 
 Para visualizar o projeto, click no link: [Organo](https://larisnarciso.github.io/Alura/Front-End/React/Organo/index.html)
 
+Para visualizar o protótipo no Figma, click no link: [Organo](https://www.figma.com/file/4VF0TQ5C4sytEahQGfiwvp/Organo?type=design&node-id=134%3A128&mode=design&t=dGGY6vmboG8edts8-1)
+
 ## Descrição
 
 Organo

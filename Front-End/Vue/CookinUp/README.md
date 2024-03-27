@@ -1,6 +1,6 @@
 # [CookinUp]()
 
-![CookinUp](CookinUp.png)
+![CookinUp](./public//CookinUp.png)
 
 Projeto desenvolvido no curso de [Vue 3: entendendo componentes, diretivas e reatividade no framework](https://cursos.alura.com.br/course/vue-3-componentes-diretivas-reatividade-framework).
 
@@ -47,20 +47,22 @@ https://github.com/larisnarciso/Alura.git
  sudo apt install nodejs
 ```
 
-4. É utilizado o json-server para simular um servidor e consumir os dados. Para instalar:
+4. Instale as dependências:
 
 ```
 npm install
 ```
 
-5. Inicializar o servidor:
+5. Inicialize o projeto:
 
 ```
-json-server --watch db.json
+npm run dev
 ```
 
-6. Dentro da pasta /Front-End/JavaScript/CrudCookinUp/src/telas/ abra o arquivo lista_cliente.html no navegador.
+6. Abra o link:
+   http://localhost:5173/
 
 ## Tecnologias:
 
 ![VUE3](https://img.shields.io/badge/Vue.js-%2320232a.svg?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![TYPESCRIPT](https://img.shields.io/badge/TypeScript-%2320232a.svg?style=for-the-badge&logo=TypeScript&logoColor=3178C6)

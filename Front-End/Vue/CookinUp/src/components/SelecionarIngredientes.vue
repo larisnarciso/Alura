@@ -1,6 +1,7 @@
 <script lang="ts">
 import { obterCategorias } from '@/http/index';
 import type ICategoria from '@/interfaces/ICategoria';
+import CardCategoria from './CardCategoria.vue';
 
 export default {
   data() {
@@ -11,6 +12,7 @@ export default {
   async created() {
     this.categorias = await obterCategorias();
   },
+  components: { CardCategoria },
 };
 </script>
 
@@ -24,7 +26,7 @@ export default {
 
     <ul class="categorias">
       <li v-for="categoria in categorias" :key="categoria.nome">
-        {{ categoria.nome }}
+        <CardCategoria :categoria="categoria" />
       </li>
     </ul>
 

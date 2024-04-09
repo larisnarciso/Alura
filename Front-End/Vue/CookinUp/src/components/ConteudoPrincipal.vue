@@ -1,15 +1,21 @@
 <script lang="ts">
 import SelecionarIngredientes from './SelecionarIngredientes.vue';
 import SuaLista from './SuaLista.vue';
+import Tag from './Tag.vue';
 
 export default {
   data() {
     return {
-      ingredientes: ['Alho', 'Manteiga', 'Oregano', 'Pão', 'Tomilho', 'Limão'],
+      ingredientes: [] as string[],
       // ingredientes: [], // testando lista vazia
     };
   },
-  components: { SelecionarIngredientes, SuaLista },
+  components: { SelecionarIngredientes, SuaLista, Tag },
+  methods: {
+    adicionarIngrediente(ingrediente: string) {
+      this.ingredientes.push(ingrediente);
+    },
+  },
 };
 </script>
 
@@ -17,7 +23,7 @@ export default {
 <template>
   <main class="conteudo-principal">
     <SuaLista :ingredientes="ingredientes" />
-    <SelecionarIngredientes />
+    <SelecionarIngredientes @adicionar-ingrediente="adicionarIngrediente" />
   </main>
 </template>
 

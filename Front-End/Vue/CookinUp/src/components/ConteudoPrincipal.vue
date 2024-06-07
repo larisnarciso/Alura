@@ -1,17 +1,17 @@
 <script lang="ts">
-import MostrarReceitas from './MostrarReceitas.vue';
-import SelecionarIngredientes from './SelecionarIngredientes.vue';
-import SuaLista from './SuaLista.vue';
-import Tag from './Tag.vue';
+import MostrarReceitas from "./MostrarReceitas.vue";
+import SelecionarIngredientes from "./SelecionarIngredientes.vue";
+import SuaLista from "./SuaLista.vue";
+import Tag from "./Tag.vue";
 
-type Pagina = 'SelecionarIngredientes' | 'MostrarReceitas';
+type Pagina = "SelecionarIngredientes" | "MostrarReceitas";
 
 export default {
   data() {
     return {
       ingredientes: [] as string[],
       // ingredientes: [], // testando lista vazia
-      conteudo: 'SelecionarIngredientes' as Pagina,
+      conteudo: "SelecionarIngredientes" as Pagina,
     };
   },
   components: { SelecionarIngredientes, SuaLista, Tag, MostrarReceitas },

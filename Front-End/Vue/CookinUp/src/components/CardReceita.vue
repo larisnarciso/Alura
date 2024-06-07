@@ -1,6 +1,6 @@
 <script lang="ts">
-import type IReceita from '@/interfaces/IReceita';
-import type { PropType } from 'vue';
+import type IReceita from "@/interfaces/IReceita";
+import type { PropType } from "vue";
 
 export default {
   props: {

@@ -1,8 +1,8 @@
 <script lang="ts">
-import { obterReceitas } from '@/http';
-import type IReceita from '@/interfaces/IReceita';
-import BotaoPrincipal from './BotaoPrincipal.vue';
-import CardReceita from './CardReceita.vue';
+import { obterReceitas } from "@/http";
+import type IReceita from "@/interfaces/IReceita";
+import BotaoPrincipal from "./BotaoPrincipal.vue";
+import CardReceita from "./CardReceita.vue";
 
 export default {
   data() {
@@ -16,7 +16,7 @@ export default {
     this.receitasEncontradas = receitas.slice(0, 8);
   },
   components: { BotaoPrincipal, CardReceita },
-  emits: ['editarReceitas'],
+  emits: ["editarReceitas"],
 };
 </script>
 
